@@ -39,12 +39,13 @@ export default {
 
 <style lang="scss">
 .header {
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #677B8F;
     height: 48px;
-    background: rgb(246, 243, 243);
-    border-bottom: 1px solid #E1E1E1;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .header__logo {

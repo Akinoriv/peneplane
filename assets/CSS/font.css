@@ -2,7 +2,7 @@
 	font-family: '1';
 	src: url('../fonts/CodecPro-Heavy.eot');
 	src: local('☺'), url('../fonts/CodecPro-Heavy.woff') format('woff'), url('../fonts/CodecPro-Heavy.ttf') format('truetype'), url('../fonts/CodecPro-Heavy.svg') format('svg');
-	font-weight: 700;
+	font-weight: normal;
 	font-style: normal;
 }
 
