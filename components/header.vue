@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .header {
     padding-top: 40px;
     padding-bottom: 40px;
