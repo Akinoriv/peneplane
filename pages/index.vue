@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <div>
 
-      <Header />
+    <Header />
 
-      <div class="catalog">
+    <div class="catalog">
 
+      <div class="catalog-header">
         <div class="catalog__box">
           <div class="catalog-rent">Rent</div>
           <div class="catalog-whatever">whatever</div>
@@ -16,32 +16,38 @@
           <div class="catalog-add-new">Add new</div>
           <button class="catalog-button" > <img class="catalog-img-plus" src="~/assets/img/Vector.png"> </button>
         </div>
-
       </div>
+
+        <Peneplaneitem/>
     </div>
+
   </div>
 </template>
 
 <script>
 import Header from '~/components/header.vue'
 
+import Peneplaneitem from '~/pages/peneplaneitem.vue'
+
 export default {
+
   components: {
-    Header
+    Header,
+    Peneplaneitem
   }
 }
 </script>
 
 <style lang="scss">
-
 .catalog {
-  padding: 56px;
-  height: 48px;
+  padding: 40px;
+
   border-radius: 48px;
   background: #F3F4F7;
-  // position: absolute;
-  // width: 1312px;
-  // height: 952px;
+}
+
+.catalog-header {
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   .catalog__box {
