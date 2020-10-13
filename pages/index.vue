@@ -18,7 +18,7 @@
         </div>
       </div>
 
-        <Peneplaneitem/>
+        <Peneplaneitem :pepelanes="pepelanes"/>
     </div>
 
   </div>
@@ -29,11 +29,29 @@ import Header from '~/components/header.vue'
 
 import Peneplaneitem from '~/pages/peneplaneitem.vue'
 
+import { mapState } from 'vuex'
+
 export default {
 
   components: {
     Header,
     Peneplaneitem
+  },
+   async asyncData ({ app, route, params, error, store }) {
+    try {
+      await store.dispatch('getpeneplaneitem')
+    } catch (err) {
+      console.log(err)
+      return error({
+        statusCode: 404,
+        message: 'Категории не найдены или сервер не доступен'
+      })
+    }
+  },
+  computed: {
+    ...mapState({
+      pepelanes: 'peneplaneitem'
+    })
   }
 }
 </script>
@@ -41,7 +59,6 @@ export default {
 <style lang="scss">
 .catalog {
   padding: 40px;
-
   border-radius: 48px;
   background: #F3F4F7;
 }
@@ -59,7 +76,7 @@ export default {
       font-family: '1';
       color: #012345;
       font-size: 40px;
-  line-height: 120%;
+      line-height: 120%;
     }
     .catalog-whatever {
       font-family: '1';

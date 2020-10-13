@@ -1,44 +1,33 @@
 <template>
     <div class="peneplanes">
 
-        <div class="peneplane"  v-for="pepelane in pepelanes " :key="pepelane.id">
-            <div class="peneplane__box" >
-                <img :src="`/_nuxt/assets/img/${pepelane.src}.png`" class="peneplane__img" >
-            </div>
+        <div v-for="pepelane in pepelanes " :key="pepelane.id">
 
-            <div
-            class="peneplane__text" >
-                <h1 class="peneplane__text-title"> {{ pepelane.title }} </h1>
-                <h2 class="peneplane__text-description"> {{ pepelane.description }} </h2>
-                <p class="peneplane__text-prise"> {{ pepelane.prise }} </p> 
-            </div>
+            <div class="peneplane"> 
+                <div class="peneplane__box" >
+                    <img :src="`/_nuxt/assets/img/${pepelane.src}.png`" class="peneplane__img" >
+                </div>
+
+                <div class="peneplane__text" >
+                    <h1 class="peneplane__text-title"> {{ pepelane.title }} </h1>
+                    <h2 class="peneplane__text-description"> {{ pepelane.description }} </h2>
+                    <p class="peneplane__text-prise"> {{ pepelane.prise }} </p> 
+                </div>
+            </div> 
+
         </div>
      </div>   
 </template>
 
 <script>
 export default {
-    // el: '#example-1',
-    data() {
-        return {
-            pepelanes: [
-                {
-                    id: 0,
-                    src: "Tema",
-                    title: "XR-74 «Cooper»",
-                    description: "Brief description of the project, in a few lines.",
-                    prise: "1 278 $/h"
-                },
-                {
-                    id: 1,
-                    src: "Plane",
-                    title: "XR-74 «Coopeееr»",
-                    description: "Brief description of the project, in a few lines.",
-                    prise: "145 278 $/h"
-                }
-            ]
-        }
-    },
+
+ props: {
+    pepelanes: {
+      type: Array,
+      default: () => []
+    }
+  },
     
     methods: {  
 
@@ -51,15 +40,24 @@ export default {
 <style lang="scss">
 
 .peneplanes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    // display: grid;
+    // grid-template: 30% 30% 30% / 30% 30% 30%;
+    // justify-content: space-around;
+    // align-content: space-between;
     .peneplane {
-        height: 164px;
-        width: 373px;
+        // height: 164px;
+        // width: 373px;
         background-color:#FCFCFC;
         border-radius: 32px;
-        margin: 16px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         display: flex;
-        // justify-content: space-around;
-        justify-content: stretch;;
+        justify-content: stretch;
+        min-width: 40%;
+        max-width: 90%;
 
         .peneplane__img {
             height: 88px;
@@ -78,7 +76,8 @@ export default {
 
             }
             .peneplane__text-description {
-                width: 186px;
+                max-width: 186px;
+                
                 font-family: 2;
                 font-size: 12px;
                 color: #677B8F;
