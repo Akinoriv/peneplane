@@ -3,56 +3,77 @@ const sleep = m => new Promise(r => setTimeout(r, m))
 const pepelanes = [
     {
         id: 0,
-        src: "Tema",
+        src: "Plane4",
         title: "XR-74 «Cooper»",
         description: "Brief description of the project, in a few lines.",
         prise: "1 278 $/h"
     },
     {
         id: 1,
-        src: "Rectangle%2012",
+        src: "Plane4",
         title: "XR-74 «Coopeееr»",
         description: "Brief description of the project, in a few lines.",
         prise: "145 278 $/h"
     },
     {
         id: 2,
-        src: "Rectangle33",
+        src: "Plane2",
         title: "XR-74 «Cooper»",
         description: "Brief description of the project, in a few lines.",
         prise: "1 278 $/h"
     },
     {
         id: 3,
-        src: "Rectangle%2012",
+        src: "Plane2",
         title: "XR-74 «Coopeееr»",
         description: "Brief description of the project, in a few lines.",
         prise: "145 278 $/h"
     },
     {
         id: 4,
-        src: "Rectangle33",
+        src: "Plane3",
         title: "XR-74 «Cooper»",
         description: "Brief description of the project, in a few lines.",
         prise: "1 278 $/h"
     },
     {
         id: 5,
-        src: "Rectangle%2012",
+        src: "Plane2",
         title: "XR-74 «Coopeееr»",
         description: "Brief description of the project, in a few lines.",
         prise: "145 278 $/h"
     },
     {
         id: 6,
-        src: "Rectangle33",
+        src: "Plane4",
         title: "XR-74 «Cooper»",
         description: "Brief description of the project, in a few lines.",
         prise: "1 278 $/h"
     },
     {
         id: 7,
-        src: "Rectangle%2012",
+        src: "Plane3",
+        title: "XR-74 «Coopeееr»",
+        description: "Brief description of the project, in a few lines.",
+        prise: "145 278 $/h"
+    },
+    {
+        id: 8,
+        src: "Plane2",
+        title: "XR-74 «Coopeееr»",
+        description: "Brief description of the project, in a few lines.",
+        prise: "145 278 $/h"
+    },
+    {
+        id: 9,
+        src: "Plane4",
+        title: "XR-74 «Cooper»",
+        description: "Brief description of the project, in a few lines.",
+        prise: "1 278 $/h"
+    },
+    {
+        id: 10,
+        src: "Plane3",
         title: "XR-74 «Coopeееr»",
         description: "Brief description of the project, in a few lines.",
         prise: "145 278 $/h"
