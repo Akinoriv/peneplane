@@ -1,13 +1,16 @@
 <template>
     <div class="peneplanes">
-        <div class="peneplane">
-            <div class="peneplane__box">
-                <img :src="`${this.peneplans[0].src}`" class="peneplane__img" >
+
+        <div class="peneplane"  v-for="pepelane in pepelanes " :key="pepelane.id">
+            <div class="peneplane__box" >
+                <img :src="`/_nuxt/assets/img/${pepelane.src}.png`" class="peneplane__img" >
             </div>
-            <div class="peneplane__text">
-                <h1 class="peneplane__text-title"> {{peneplans[0].title}} </h1>
-                <h2 class="peneplane__text-description">Brief description of the project, in a few lines.</h2>
-                <p class="peneplane__text-prise">1 278 $/h</p>
+
+            <div
+            class="peneplane__text" >
+                <h1 class="peneplane__text-title"> {{ pepelane.title }} </h1>
+                <h2 class="peneplane__text-description"> {{ pepelane.description }} </h2>
+                <p class="peneplane__text-prise"> {{ pepelane.prise }} </p> 
             </div>
         </div>
      </div>   
@@ -15,17 +18,23 @@
 
 <script>
 export default {
+    // el: '#example-1',
     data() {
         return {
-            peneplans: [
+            pepelanes: [
                 {
                     id: 0,
-                    picName: "Rectangle3.png",
-                    src: "/_nuxt/assets/img/Rectangle3.png",
+                    src: "Tema",
                     title: "XR-74 «Cooper»",
                     description: "Brief description of the project, in a few lines.",
                     prise: "1 278 $/h"
-
+                },
+                {
+                    id: 1,
+                    src: "Plane",
+                    title: "XR-74 «Coopeееr»",
+                    description: "Brief description of the project, in a few lines.",
+                    prise: "145 278 $/h"
                 }
             ]
         }
@@ -33,10 +42,7 @@ export default {
     
     methods: {  
 
-    getImgUrl(pic) {
-        return require('../assets/img' + pic);
-    }
-},
+    },
 }
 
 
