@@ -1,24 +1,25 @@
 <template>
   <div>
       <header class="header">
-        
-        <div class="header__logo">
-            <img class="header__logo-img" src="~assets/img/Logo.png">
-            <img class="header__logo-name" src="~assets/img/Pepelane.png">
+        <div class="header-box">
+            <div class="header__logo">
+                <img class="header__logo-img" src="~assets/img/Logo.png">
+                <img class="header__logo-name" src="~assets/img/Pepelane.png">
+            </div>
+            <div class="header-item"> World's first affordable airsharing </div>
         </div>
-        <div class="header-item"> World's first affordable airsharing </div>
-        <div class="header__tema">
-            <img class="header__tema-img"  src="~assets/img/Tema.png"> 
-            <div class="header__tema-name"> Night mod </div>
+        <div class="header-box">
+            <div class="header__tema">
+                <img class="header__tema-img"  src="~assets/img/Tema.png"> 
+                <div class="header__tema-name"> Night mod </div>
+            </div>
+            <div class="header__account">
+                <img class="header__account-img" src="~assets/img/Frame.png">
+                <img class="header__account-img" src="~assets/img/Subtract.png">
+                <div class="header__account-name"> Bessie Cooper </div>
+                <img class="header__account-photo" src="~assets/img/Rectangle 12.png">
+            </div>
         </div>
-        <div class="header__account">
-            <img class="header__account-img" src="~assets/img/Frame.png">
-            <img class="header__account-img" src="~assets/img/Subtract.png">
-            <div class="header__account-name"> Bessie Cooper </div>
-            <img class="header__account-photo" src="~assets/img/Rectangle 12.png">
-
-        </div>
-         
        
 
       </header>
@@ -44,9 +45,12 @@ export default {
     padding-bottom: 40px;
     color: #677B8F;
     height: 48px;
-
     display: flex;
     justify-content: space-between;
+    .header-box {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .header__logo {

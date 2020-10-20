@@ -41,23 +41,15 @@ export default {
 
 .peneplanes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
     grid-gap: 1rem;
-    // display: grid;
-    // grid-template: 30% 30% 30% / 30% 30% 30%;
-    // justify-content: space-around;
-    // align-content: space-between;
+
     .peneplane {
-        // height: 164px;
-        // width: 373px;
+        margin: 12px;
         background-color:#FCFCFC;
         border-radius: 32px;
-        margin-top: 12px;
-        margin-bottom: 12px;
         display: flex;
-        justify-content: stretch;
-        min-width: 40%;
-        max-width: 90%;
+  
 
         .peneplane__img {
             height: 88px;
